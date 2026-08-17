@@ -1,63 +1,25 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.querySelector('.hamburger');
-    const navList = document.querySelector('.nav-list');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    // Toggle Mobile Menu
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navList.classList.toggle('active');
-    });
-
-    // Close Mobile Menu when a link is clicked
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navList.classList.remove('active');
-        });
-    });
-
-    // Smooth Scrolling for Anchor Links (with offset for fixed header)
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                const headerOffset = 80;
-                const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: "smooth"
-                });
-            }
-        });
-    });
-
-    // Active Link Highlighting on Scroll
-    const sections = document.querySelectorAll('section');
-
-    window.addEventListener('scroll', () => {
-        let current = '';
-        const scrollY = window.scrollY;
-
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (scrollY >= (sectionTop - 150)) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').includes(current)) {
-                link.classList.add('active');
-            }
-        });
-    });
+const lightbox=document.getElementById('lightbox');
+const lightboxImg=lightbox.querySelector('img');
+const closeBtn=lightbox.querySelector('button');
+document.querySelectorAll('.work-card img').forEach(img=>{
+  img.addEventListener('click',()=>{lightboxImg.src=img.src;lightboxImg.alt=img.alt;lightbox.classList.add('show');});
 });
+function closeLightbox(){lightbox.classList.remove('show');lightboxImg.src='';}
+closeBtn.addEventListener('click',closeLightbox);
+lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeLightbox()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()});
+
+const portfolioCards=document.querySelectorAll('.portfolio-grid-enhanced .work-card');
+if('IntersectionObserver' in window){
+  const portfolioObserver=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('is-visible');
+        portfolioObserver.unobserve(entry.target);
+      }
+    });
+  },{threshold:.18});
+  portfolioCards.forEach(card=>portfolioObserver.observe(card));
+}else{
+  portfolioCards.forEach(card=>card.classList.add('is-visible'));
+}

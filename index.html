@@ -1,560 +1,252 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-
+<!doctype html>
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayman Naeem | Modern Web Designer</title>
-    <meta name="description"
-        content="Portfolio of Ayman Naeem, a web designer specializing in clean, modern, and user-friendly websites.">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        bg: '#0f0f0f',
-                        card: '#1a1a1a',
-                        text: '#e0e0e0',
-                        muted: '#a0a0a0',
-                        primary: '#D4AF37', // Gold
-                        secondary: '#F2C94C', // Lighter Gold
-                    },
-                    fontFamily: {
-                        sans: ['Outfit', 'sans-serif'],
-                    },
-                    container: {
-                        center: true,
-                        padding: '1.5rem',
-                        screens: {
-                            lg: '1200px',
-                        },
-                    },
-                    animation: {
-                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
-                        'fade-in-right': 'fadeInRight 0.8s ease-out forwards',
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    },
-                    keyframes: {
-                        fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        },
-                        fadeInRight: {
-                            '0%': { opacity: '0', transform: 'translateX(20px)' },
-                            '100%': { opacity: '1', transform: 'translateX(0)' },
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Outfit', sans-serif;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>أيمن نعيم | تصميم مواقع وLanding Pages للشركات والأعمال</title>
+  <meta name="description" content="أيمن نعيم، مصمم مواقع في القاهرة. تصميم مواقع احترافية وLanding Pages متوافقة مع الجوال ومحركات البحث، مع محتوى واضح يساعد الزائر على فهم الخدمة والتواصل عبر واتساب.">
+  <meta name="keywords" content="أيمن نعيم, تصميم مواقع, تصميم Landing Page, مصمم مواقع في القاهرة, تصميم مواقع للشركات, تصميم مواقع WordPress, تصميم مواقع متوافقة مع SEO">
+  <meta name="author" content="أيمن نعيم">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "أيمن نعيم لتصميم المواقع",
+    "description": "تصميم مواقع احترافية وصفحات هبوط للشركات والأنشطة التجارية مع تحسين تجربة المستخدم والوضوح والتحويل.",
+    "founder": {
+      "@type": "Person",
+      "name": "أيمن نعيم",
+      "jobTitle": "مصمم مواقع وواجهات Landing Pages"
+    },
+    "areaServed": "Egypt",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "مدينة نصر",
+      "addressRegion": "القاهرة",
+      "addressCountry": "EG"
+    },
+    "telephone": "+201010484782"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body class="bg-bg text-text antialiased selection:bg-primary selection:text-black">
+<header class="navbar">
+  <div class="container nav-inner">
+    <a class="brand" href="#home">أيمن نعيم<span>.</span></a>
+    <nav class="nav-links" aria-label="التنقل الرئيسي">
+      <a href="#home">الرئيسية</a>
+      <a href="#services">الخدمات</a>
+      <a href="#benefits">القيمة</a>
+      <a href="#process">طريقة العمل</a>
+      <a href="#work">سابقة الأعمال</a>
+      <a href="#faq">الأسئلة الشائعة</a>
+      <a href="#contact">تواصل</a>
+    </nav>
+    <a class="nav-cta" href="https://wa.me/201010484782" target="_blank" rel="noopener">تواصل على واتساب</a>
+  </div>
+</header>
 
-    <!-- Header -->
-    <header class="fixed top-0 left-0 w-full z-50 bg-bg/95 backdrop-blur-md border-b border-white/5">
-        <div class="container flex justify-between items-center py-5">
-            <a href="#" class="text-2xl font-bold text-white">Ayman<span class="text-primary">.</span></a>
-
-            <nav class="hidden md:block">
-                <ul class="flex gap-8">
-                    <li><a href="#home"
-                            class="nav-link text-white hover:text-primary transition-colors font-medium relative group">Home<span
-                                class="absolute bottom-[-5px] left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span></a>
-                    </li>
-                    <li><a href="#about"
-                            class="nav-link text-white hover:text-primary transition-colors font-medium relative group">About<span
-                                class="absolute bottom-[-5px] left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span></a>
-                    </li>
-                    <li><a href="#skills"
-                            class="nav-link text-white hover:text-primary transition-colors font-medium relative group">Skills<span
-                                class="absolute bottom-[-5px] left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span></a>
-                    </li>
-                    <li><a href="#services"
-                            class="nav-link text-white hover:text-primary transition-colors font-medium relative group">Services<span
-                                class="absolute bottom-[-5px] left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span></a>
-                    </li>
-                    <li><a href="#portfolio"
-                            class="nav-link text-white hover:text-primary transition-colors font-medium relative group">Portfolio<span
-                                class="absolute bottom-[-5px] left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span></a>
-                    </li>
-                    <li><a href="#contact"
-                            class="nav-link text-white hover:text-primary transition-colors font-medium relative group">Contact<span
-                                class="absolute bottom-[-5px] left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span></a>
-                    </li>
-                </ul>
-            </nav>
-
-            <!-- Mobile Menu Button -->
-            <button class="md:hidden text-white focus:outline-none hamburger">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
-                    </path>
-                </svg>
-            </button>
+<main id="home">
+  <section class="hero hero-v2">
+    <div class="hero-v2-glow hero-v2-glow-one"></div>
+    <div class="hero-v2-glow hero-v2-glow-two"></div>
+    <div class="space-field" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+    <div class="hero-v2-grid container">
+      <div class="hero-v2-copy">
+        <div class="hero-badge"><span></span> أيمن نعيم، مصمم مواقع من القاهرة</div>
+        <h1>موقع واضح يساعد عميلك<br><strong>يفهم خدمتك ويتواصل بثقة.</strong></h1>
+        <p class="hero-v2-lead">أصمم مواقع وصفحات هبوط للشركات والأنشطة التجارية، بمحتوى مرتب وتجربة استخدام بسيطة وسريعة، حتى يجد الزائر الإجابة التي يبحث عنها ويأخذ خطوة التواصل بسهولة.</p>
+        <div class="hero-v2-actions">
+          <a class="btn btn-gold" href="https://wa.me/201010484782" target="_blank" rel="noopener">ناقش مشروعك على واتساب</a>
+          <a class="btn btn-outline" href="#work">شاهد سابقة الأعمال</a>
         </div>
-
-        <!-- Mobile Menu -->
-        <div class="mobile-menu hidden fixed inset-0 bg-card z-40 flex-col items-center justify-center gap-8 md:hidden">
-            <a href="#home" class="text-xl font-medium hover:text-primary">Home</a>
-            <a href="#about" class="text-xl font-medium hover:text-primary">About</a>
-            <a href="#skills" class="text-xl font-medium hover:text-primary">Skills</a>
-            <a href="#services" class="text-xl font-medium hover:text-primary">Services</a>
-            <a href="#portfolio" class="text-xl font-medium hover:text-primary">Portfolio</a>
-            <a href="#contact" class="text-xl font-medium hover:text-primary">Contact</a>
-            <button class="absolute top-6 right-6 text-white close-menu">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
-                    </path>
-                </svg>
-            </button>
+        <div class="hero-v2-proof">
+          <div class="proof-stars">★★★★★</div>
+          <div><b>تصميم عملي يخدم التسويق والمبيعات</b><small>SEO • UI/UX • WordPress • E-commerce • Landing Pages</small></div>
         </div>
-    </header>
-
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="min-h-screen flex items-center pt-20 relative overflow-hidden">
-            <!-- Background Gradients -->
-            <div
-                class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 animate-pulse-slow">
-            </div>
-            <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2 animate-pulse-slow"
-                style="animation-delay: 2s;"></div>
-
-            <div class="container grid md:grid-cols-2 gap-12 items-center relative z-10">
-                <div class="text-center md:text-left order-2 md:order-1">
-                    <p class="text-primary font-semibold text-xl mb-2 opacity-0 animate-fade-in-up"
-                        style="animation-delay: 0.1s;">Hello, I'm</p>
-                    <h1 class="text-5xl md:text-7xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#F2C94C] opacity-0 animate-fade-in-up"
-                        style="animation-delay: 0.2s;">Ayman Naeem</h1>
-                    <h2 class="text-2xl md:text-3xl text-muted font-normal mb-6 opacity-0 animate-fade-in-up"
-                        style="animation-delay: 0.3s;">Crafting Modern, User-Friendly Websites</h2>
-                    <p class="text-muted text-lg mb-8 max-w-lg mx-auto md:mx-0 opacity-0 animate-fade-in-up"
-                        style="animation-delay: 0.4s;">I design and build beautiful, functional websites that help
-                        businesses grow.</p>
-                    <div class="flex gap-4 justify-center md:justify-start opacity-0 animate-fade-in-up"
-                        style="animation-delay: 0.5s;">
-                        <a href="#portfolio"
-                            class="px-8 py-3 rounded-full font-semibold bg-gradient-to-r from-primary to-secondary text-black hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300">View
-                            My Work</a>
-                        <a href="#contact"
-                            class="px-8 py-3 rounded-full font-semibold border border-primary text-primary hover:bg-primary/10 hover:-translate-y-1 transition-all duration-300">Contact
-                            Me</a>
-                    </div>
-                </div>
-                <div class="flex justify-center order-1 md:order-2 opacity-0 animate-fade-in-right"
-                    style="animation-delay: 0.4s;">
-                    <div
-                        class="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] rounded-full p-1 bg-gradient-to-tr from-primary to-secondary shadow-2xl animate-float">
-                        <div class="w-full h-full rounded-full overflow-hidden bg-card">
-                            <img src="images/profile-placeholder.png" alt="Ayman Naeem"
-                                class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="py-24">
-            <div class="container">
-                <h2
-                    class="text-4xl font-bold text-center mb-16 relative inline-block left-1/2 -translate-x-1/2 after:content-[''] after:absolute after:-bottom-3 after:left-1/2 after:-translate-x-1/2 after:w-16 after:h-1 after:bg-gradient-to-r after:from-primary after:to-secondary after:rounded-full">
-                    About Me</h2>
-
-                <div class="grid md:grid-cols-2 gap-12">
-                    <div class="space-y-6 text-muted">
-                        <p>I am a passionate web designer with a knack for blending creativity with functionality. With
-                            a background in Graphic Design from Modern Academy, I specialize in creating intuitive,
-                            engaging, and high-performing websites.</p>
-                        <p>Over the past 10+ years, I have helped businesses, startups, and personal brands establish a
-                            strong online presence through custom web design and development.</p>
-
-                        <div class="flex gap-8 mt-8">
-                            <div>
-                                <span class="block text-4xl font-bold text-primary">10+</span>
-                                <span class="text-sm text-muted">Years Experience</span>
-                            </div>
-                            <div>
-                                <span class="block text-4xl font-bold text-primary">50+</span>
-                                <span class="text-sm text-muted">Projects Completed</span>
-                            </div>
-                            <div>
-                                <span class="block text-4xl font-bold text-primary">100%</span>
-                                <span class="text-sm text-muted">Client Satisfaction</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="space-y-8 border-l-2 border-white/10 pl-8 ml-4 md:ml-0">
-                        <div class="relative">
-                            <div
-                                class="absolute -left-[41px] top-0 w-8 h-8 bg-card border-2 border-primary rounded-full flex items-center justify-center text-primary text-xs">
-                                🎓
-                            </div>
-                            <h3 class="text-xl font-bold text-white">Degree in Graphic Design</h3>
-                            <span class="text-secondary text-sm block mb-2">Modern Academy</span>
-                            <p class="text-muted">Specializing in web development, UI/UX, and responsive design.</p>
-                        </div>
-                        <div class="relative">
-                            <div
-                                class="absolute -left-[41px] top-0 w-8 h-8 bg-card border-2 border-primary rounded-full flex items-center justify-center text-primary text-xs">
-                                💼
-                            </div>
-                            <h3 class="text-xl font-bold text-white">Freelance Web Designer</h3>
-                            <span class="text-secondary text-sm block mb-2">2013 - Present</span>
-                            <p class="text-muted">Designing and developing websites for various clients globally.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="py-24 bg-white/5">
-            <div class="container">
-                <h2
-                    class="text-4xl font-bold text-center mb-16 relative inline-block left-1/2 -translate-x-1/2 after:content-[''] after:absolute after:-bottom-3 after:left-1/2 after:-translate-x-1/2 after:w-16 after:h-1 after:bg-gradient-to-r after:from-primary after:to-secondary after:rounded-full">
-                    My Skills</h2>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Skill Card -->
-                    <div
-                        class="bg-card p-8 rounded-2xl border border-white/5 hover:border-primary hover:-translate-y-1 transition-all duration-300 group">
-                        <div class="text-4xl text-primary mb-6 group-hover:scale-110 transition-transform">
-                            <!-- Icon placeholder using emoji or SVG -->
-                            🌐
-                        </div>
-                        <h3 class="text-lg font-bold mb-4">HTML & CSS</h3>
-                        <div class="w-full h-1.5 bg-white/10 rounded-full overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-primary to-secondary w-[95%]"></div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="bg-card p-8 rounded-2xl border border-white/5 hover:border-primary hover:-translate-y-1 transition-all duration-300 group">
-                        <div class="text-4xl text-primary mb-6 group-hover:scale-110 transition-transform">⚡</div>
-                        <h3 class="text-lg font-bold mb-4">JavaScript</h3>
-                        <div class="w-full h-1.5 bg-white/10 rounded-full overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-primary to-secondary w-[80%]"></div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="bg-card p-8 rounded-2xl border border-white/5 hover:border-primary hover:-translate-y-1 transition-all duration-300 group">
-                        <div class="text-4xl text-primary mb-6 group-hover:scale-110 transition-transform">🎨</div>
-                        <h3 class="text-lg font-bold mb-4">UI/UX Design</h3>
-                        <div class="w-full h-1.5 bg-white/10 rounded-full overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-primary to-secondary w-[90%]"></div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="bg-card p-8 rounded-2xl border border-white/5 hover:border-primary hover:-translate-y-1 transition-all duration-300 group">
-                        <div class="text-4xl text-primary mb-6 group-hover:scale-110 transition-transform">📱</div>
-                        <h3 class="text-lg font-bold mb-4">Responsive Design</h3>
-                        <div class="w-full h-1.5 bg-white/10 rounded-full overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-primary to-secondary w-[100%]"></div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="bg-card p-8 rounded-2xl border border-white/5 hover:border-primary hover:-translate-y-1 transition-all duration-300 group">
-                        <div class="text-4xl text-primary mb-6 group-hover:scale-110 transition-transform">📝</div>
-                        <h3 class="text-lg font-bold mb-4">WordPress</h3>
-                        <div class="w-full h-1.5 bg-white/10 rounded-full overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-primary to-secondary w-[85%]"></div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="bg-card p-8 rounded-2xl border border-white/5 hover:border-primary hover:-translate-y-1 transition-all duration-300 group">
-                        <div class="text-4xl text-primary mb-6 group-hover:scale-110 transition-transform">🖌️</div>
-                        <h3 class="text-lg font-bold mb-4">Graphic Design</h3>
-                        <div class="w-full h-1.5 bg-white/10 rounded-full overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-primary to-secondary w-[90%]"></div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="bg-card p-8 rounded-2xl border border-white/5 hover:border-primary hover:-translate-y-1 transition-all duration-300 group">
-                        <div class="text-4xl text-primary mb-6 group-hover:scale-110 transition-transform">🔍</div>
-                        <h3 class="text-lg font-bold mb-4">SEO Basics</h3>
-                        <div class="w-full h-1.5 bg-white/10 rounded-full overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-primary to-secondary w-[75%]"></div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="bg-card p-8 rounded-2xl border border-white/5 hover:border-primary hover:-translate-y-1 transition-all duration-300 group">
-                        <div class="text-4xl text-primary mb-6 group-hover:scale-110 transition-transform">🌍</div>
-                        <h3 class="text-lg font-bold mb-4">Cross-Browser</h3>
-                        <div class="w-full h-1.5 bg-white/10 rounded-full overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-primary to-secondary w-[95%]"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section id="services" class="py-24">
-            <div class="container">
-                <h2
-                    class="text-4xl font-bold text-center mb-16 relative inline-block left-1/2 -translate-x-1/2 after:content-[''] after:absolute after:-bottom-3 after:left-1/2 after:-translate-x-1/2 after:w-16 after:h-1 after:bg-gradient-to-r after:from-primary after:to-secondary after:rounded-full">
-                    Services</h2>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div
-                        class="bg-card p-10 rounded-2xl border border-white/5 hover:border-secondary hover:-translate-y-2 transition-all duration-300 relative overflow-hidden group">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                        </div>
-                        <div class="text-5xl text-secondary mb-6">💻</div>
-                        <h3 class="text-xl font-bold mb-4 relative z-10">Custom Website Design</h3>
-                        <p class="text-muted relative z-10">Tailor-made websites that fit your brand and business needs
-                            perfectly.</p>
-                    </div>
-
-                    <div
-                        class="bg-card p-10 rounded-2xl border border-white/5 hover:border-secondary hover:-translate-y-2 transition-all duration-300 relative overflow-hidden group">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                        </div>
-                        <div class="text-5xl text-secondary mb-6">✨</div>
-                        <h3 class="text-xl font-bold mb-4 relative z-10">UI/UX Design</h3>
-                        <p class="text-muted relative z-10">Creating intuitive and engaging user interfaces for better
-                            user experience.</p>
-                    </div>
-
-                    <div
-                        class="bg-card p-10 rounded-2xl border border-white/5 hover:border-secondary hover:-translate-y-2 transition-all duration-300 relative overflow-hidden group">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                        </div>
-                        <div class="text-5xl text-secondary mb-6">📱</div>
-                        <h3 class="text-xl font-bold mb-4 relative z-10">Responsive Design</h3>
-                        <p class="text-muted relative z-10">Websites that look and work great on all devices, from
-                            desktops to phones.</p>
-                    </div>
-
-                    <div
-                        class="bg-card p-10 rounded-2xl border border-white/5 hover:border-secondary hover:-translate-y-2 transition-all duration-300 relative overflow-hidden group">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                        </div>
-                        <div class="text-5xl text-secondary mb-6">⚙️</div>
-                        <h3 class="text-xl font-bold mb-4 relative z-10">WordPress Development</h3>
-                        <p class="text-muted relative z-10">Easy-to-manage websites built on the world's most popular
-                            CMS.</p>
-                    </div>
-
-                    <div
-                        class="bg-card p-10 rounded-2xl border border-white/5 hover:border-secondary hover:-translate-y-2 transition-all duration-300 relative overflow-hidden group">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                        </div>
-                        <div class="text-5xl text-secondary mb-6">🚀</div>
-                        <h3 class="text-xl font-bold mb-4 relative z-10">Website Optimization</h3>
-                        <p class="text-muted relative z-10">Improving speed and performance for better ranking and user
-                            retention.</p>
-                    </div>
-
-                    <div
-                        class="bg-card p-10 rounded-2xl border border-white/5 hover:border-secondary hover:-translate-y-2 transition-all duration-300 relative overflow-hidden group">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                        </div>
-                        <div class="text-5xl text-secondary mb-6">📐</div>
-                        <h3 class="text-xl font-bold mb-4 relative z-10">Wireframing & Prototyping</h3>
-                        <p class="text-muted relative z-10">Visualizing the structure and flow of your site before
-                            development.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="py-24 bg-white/5">
-            <div class="container">
-                <h2
-                    class="text-4xl font-bold text-center mb-16 relative inline-block left-1/2 -translate-x-1/2 after:content-[''] after:absolute after:-bottom-3 after:left-1/2 after:-translate-x-1/2 after:w-16 after:h-1 after:bg-gradient-to-r after:from-primary after:to-secondary after:rounded-full">
-                    Recent Work</h2>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Portfolio Item -->
-                    <div
-                        class="bg-card rounded-2xl overflow-hidden border border-white/5 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group">
-                        <div class="h-48 overflow-hidden">
-                            <img src="images/project-placeholder.png" alt="Project"
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">E-Shop Redesign</h3>
-                            <p class="text-muted text-sm mb-4">Modern layout, mobile-friendly, improved navigation.</p>
-                            <span
-                                class="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full mb-4">E-Commerce</span>
-                            <a href="#"
-                                class="inline-block w-full text-center py-2 rounded-lg border border-primary text-primary font-semibold hover:bg-primary hover:text-black transition-all duration-300 transform hover:-translate-y-1">View
-                                Project</a>
-                        </div>
-                    </div>
-
-                    <div
-                        class="bg-card rounded-2xl overflow-hidden border border-white/5 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group">
-                        <div class="h-48 overflow-hidden">
-                            <img src="images/project-placeholder.png" alt="Project"
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Photographer Portfolio</h3>
-                            <p class="text-muted text-sm mb-4">Responsive, smooth galleries, clean typography.</p>
-                            <span
-                                class="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full mb-4">Portfolio</span>
-                            <a href="#"
-                                class="inline-block w-full text-center py-2 rounded-lg border border-primary text-primary font-semibold hover:bg-primary hover:text-black transition-all duration-300 transform hover:-translate-y-1">View
-                                Project</a>
-                        </div>
-                    </div>
-
-                    <div
-                        class="bg-card rounded-2xl overflow-hidden border border-white/5 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group">
-                        <div class="h-48 overflow-hidden">
-                            <img src="images/project-placeholder.png" alt="Project"
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Startup Landing Page</h3>
-                            <p class="text-muted text-sm mb-4">High-converting, UI/UX optimized, lead generation.</p>
-                            <span
-                                class="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full mb-4">Landing
-                                Page</span>
-                            <a href="#"
-                                class="inline-block w-full text-center py-2 rounded-lg border border-primary text-primary font-semibold hover:bg-primary hover:text-black transition-all duration-300 transform hover:-translate-y-1">View
-                                Project</a>
-                        </div>
-                    </div>
-
-                    <div
-                        class="bg-card rounded-2xl overflow-hidden border border-white/5 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group">
-                        <div class="h-48 overflow-hidden">
-                            <img src="images/project-placeholder.png" alt="Project"
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Corporate Website</h3>
-                            <p class="text-muted text-sm mb-4">Professional branding, interactive elements,
-                                SEO-optimized.</p>
-                            <span
-                                class="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full mb-4">Corporate</span>
-                            <a href="https://1steg.com"
-                                class="inline-block w-full text-center py-2 rounded-lg border border-primary text-primary font-semibold hover:bg-primary hover:text-black transition-all duration-300 transform hover:-translate-y-1">View
-                                Project</a>
-                        </div>
-                    </div>
-
-                    <div
-                        class="bg-card rounded-2xl overflow-hidden border border-white/5 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group">
-                        <div class="h-48 overflow-hidden">
-                            <img src="images/project-placeholder.png" alt="Project"
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Blog Platform</h3>
-                            <p class="text-muted text-sm mb-4">User-friendly, responsive, integrated social sharing.</p>
-                            <span
-                                class="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full mb-4">Blog</span>
-                            <a href="#"
-                                class="inline-block w-full text-center py-2 rounded-lg border border-primary text-primary font-semibold hover:bg-primary hover:text-black transition-all duration-300 transform hover:-translate-y-1">View
-                                Project</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-24">
-            <div class="container max-w-4xl">
-                <h2
-                    class="text-4xl font-bold text-center mb-16 relative inline-block left-1/2 -translate-x-1/2 after:content-[''] after:absolute after:-bottom-3 after:left-1/2 after:-translate-x-1/2 after:w-16 after:h-1 after:bg-gradient-to-r after:from-primary after:to-secondary after:rounded-full">
-                    Get In Touch</h2>
-
-                <div class="bg-card p-12 rounded-3xl border border-white/5 text-center shadow-2xl">
-                    <p class="text-muted text-lg mb-12">Feel free to reach out for collaborations or just a friendly
-                        hello.</p>
-
-                    <div class="grid md:grid-cols-3 gap-8">
-                        <div class="flex flex-col items-center group">
-                            <h3 class="text-lg font-bold text-white mb-2">Email</h3>
-                            <a href="mailto:aymannk50@gmail.com"
-                                class="text-primary hover:text-white transition-colors">aymannk50@gmail.com</a>
-                        </div>
-
-                        <div class="flex flex-col items-center group">
-                            <h3 class="text-lg font-bold text-white mb-2">Phone</h3>
-                            <a href="tel:01226143803"
-                                class="text-primary hover:text-white transition-colors">01226143803</a>
-                        </div>
-
-                        <div class="flex flex-col items-center group">
-                            <h3 class="text-lg font-bold text-white mb-2">WhatsApp</h3>
-                            <a href="https://wa.me/201226143803" target="_blank"
-                                class="text-primary hover:text-white transition-colors break-all">https://wa.me/201226143803</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-black py-8 border-t border-white/5 text-center">
-        <div class="container">
-            <p class="text-muted">&copy; 2025 Ayman Naeem. All rights reserved.</p>
+      </div>
+      <div class="hero-v2-visual">
+        <div class="hero-corners" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+        <div class="hero-photo-ring"></div>
+        <div class="hero-photo-wrap"><img src="images/1758813904382.jpg" alt="أيمن نعيم مصمم مواقع وصفحات هبوط في القاهرة" loading="eager"></div>
+        <div class="hero-float-card hero-contact-card">
+          <span>تواصل مباشر</span><strong>01010484782</strong><small>واتساب واتصال</small>
         </div>
-    </footer>
+        <div class="hero-float-card hero-location-card">
+          <span>تركيز التصميم</span><strong>وضوح وثقة</strong><small>مناسب للزائر ومحركات البحث</small>
+        </div>
+        <div class="hero-orbit-dot dot-a"></div><div class="hero-orbit-dot dot-b"></div>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        // Mobile Menu Logic
-        const hamburger = document.querySelector('.hamburger');
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const closeMenu = document.querySelector('.close-menu');
-        const menuLinks = document.querySelectorAll('.mobile-menu a');
+  <section class="trust-bar">
+    <div class="container trust-inner">
+      <span>تصميم مواقع يخدم الزائر، لا الشكل فقط</span>
+      <div class="trust-list"><b>SEO Ready</b><b>WordPress</b><b>Landing Pages</b><b>E-commerce</b><b>Responsive</b></div>
+    </div>
+  </section>
 
-        hamburger.addEventListener('click', () => {
-            mobileMenu.classList.remove('hidden');
-            mobileMenu.classList.add('flex');
-        });
+  <section class="stats-section">
+    <div class="container stats-grid">
+      <div><strong>11+</strong><span>نموذج متنوع في سابقة الأعمال</span></div>
+      <div><strong>Mobile</strong><span>تصميم متجاوب مع الجوال</span></div>
+      <div><strong>SEO</strong><span>هيكل واضح لمحركات البحث</span></div>
+      <div><strong>AI</strong><span>محتوى مفهوم لمحركات الذكاء الاصطناعي</span></div>
+    </div>
+  </section>
 
-        closeMenu.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-            mobileMenu.classList.remove('flex');
-        });
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-head">
+        <div><div class="eyebrow"><span></span> ما الذي أقدمه؟</div><h2>تصميم موقع يشرح نشاطك <strong>بلغة يفهمها العميل</strong></h2></div>
+        <p>الموقع الجيد لا يعتمد على الشكل وحده. يحتاج رسالة واضحة، ترتيب منطقي للمعلومات، سرعة في التصفح، وتجربة تجعل الزائر يعرف ماذا يفعل بعد ذلك.</p>
+      </div>
+      <div class="feature-grid">
+        <article><span>01</span><h3>تصميم مواقع للشركات</h3><p>واجهة منظمة تعرض من أنت، ماذا تقدم، وما الذي يميزك عن المنافسين بدون ازدحام أو رسائل مبهمة.</p></article>
+        <article><span>02</span><h3>صفحات هبوط Landing Pages</h3><p>صفحة مركزة لخدمة أو عرض محدد، تبدأ بالمشكلة والنتيجة ثم الدليل وطريقة التواصل.</p></article>
+        <article><span>03</span><h3>تحسين تجربة المستخدم</h3><p>تنظيم العناوين، الصور، الأزرار، والمسافات حتى تكون القراءة سهلة على الجوال والكمبيوتر.</p></article>
+        <article><span>04</span><h3>تهيئة أساسية للسيو</h3><p>عناوين واضحة، وصف Meta مناسب، نصوص مفهومة، وبنية تساعد Google ومحركات الذكاء الاصطناعي على فهم الصفحة.</p></article>
+      </div>
+    </div>
+  </section>
 
-        menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                mobileMenu.classList.remove('flex');
-            });
-        });
-    </script>
+  <section class="solution section-dark">
+    <div class="container solution-grid">
+      <div>
+        <div class="eyebrow light"><span></span> طريقة التفكير</div>
+        <h2>أبني الموقع حول أسئلة الزائر<br><strong>وليس حول التصميم فقط.</strong></h2>
+        <p>قبل اختيار الألوان والصور، نحدد ما الذي يبحث عنه العميل: هل يريد معرفة السعر؟ الثقة؟ أمثلة سابقة؟ طريقة التواصل؟ ثم نرتب الصفحة لتجيب عن هذه الأسئلة بوضوح.</p>
+        <ul class="check-list">
+          <li>عنوان رئيسي يوضح الخدمة والنتيجة من أول شاشة</li>
+          <li>عرض الخدمات بطريقة مختصرة تساعد على المقارنة</li>
+          <li>إظهار سابقة الأعمال لتقليل التردد وزيادة الثقة</li>
+          <li>معلومات تواصل ظاهرة وزر واتساب في أكثر من موضع</li>
+          <li>نصوص منظمة بكلمات يبحث عنها العملاء فعلًا</li>
+        </ul>
+        <a class="btn btn-gold" href="https://wa.me/201010484782" target="_blank" rel="noopener">ابدأ بمراجعة فكرتك</a>
+      </div>
+      <div class="solution-visuals">
+        <div class="screen-card solution-main-screen"><div class="browser"><i></i><i></i><i></i></div><img src="images/woodmart-home-1-600x706.jpg" alt="نموذج صفحة متجر إلكتروني" loading="lazy"></div>
+        <div class="screen-card solution-secondary-screen"><div class="browser"><i></i><i></i><i></i></div><img src="images/juno-slider-1-600x706.jpg" alt="نموذج صفحة موقع محتوى" loading="lazy"></div>
+        <div class="solution-label"><span>Funnel</span><b>من أول زيارة إلى قرار التواصل</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="benefits">
+    <div class="container">
+      <div class="center-head"><div class="eyebrow"><span></span> قيمة للزائر</div><h2>الزائر يحتاج إجابات واضحة<br><strong>قبل أن يثق ويتواصل.</strong></h2><p>لذلك أكتب وأرتب الصفحة بطريقة تساعده على اتخاذ قرار، وتساعد محركات البحث على فهم موضوع الموقع.</p></div>
+      <div class="benefit-grid">
+        <article><span>01</span><h3>يعرف هل خدمتك مناسبة له</h3><p>نوضح نوع الخدمة، لمن تناسب، وما النتيجة المتوقعة من التعامل معك.</p></article>
+        <article><span>02</span><h3>يرى أمثلة قبل أن يسأل</h3><p>سابقة الأعمال تعرض أسلوب التصميم وتساعد العميل على تخيل شكل موقعه القادم.</p></article>
+        <article><span>03</span><h3>لا يضيع داخل الصفحة</h3><p>كل قسم يقوده للقسم التالي، والأزرار تظهر في الأماكن التي يتوقعها الزائر.</p></article>
+        <article><span>04</span><h3>يجدك عبر البحث والذكاء الاصطناعي</h3><p>استخدام عناوين وصفية ونصوص واضحة يجعل الصفحة أسهل في الفهرسة والفهم.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section process" id="process">
+    <div class="container">
+      <div class="center-head"><div class="eyebrow"><span></span> طريقة العمل</div><h2><strong>3 خطوات</strong> واضحة من الفكرة إلى الإطلاق</h2></div>
+      <div class="steps">
+        <article><b>1</b><h3>فهم النشاط والعميل</h3><p>أبدأ بأسئلة بسيطة عن الخدمة، الجمهور، المنافسين، والهدف الأساسي من الموقع.</p></article>
+        <article><b>2</b><h3>كتابة الهيكل والتصميم</h3><p>أرتب أقسام الصفحة، أجهز النصوص الأساسية، ثم أصمم واجهة متوافقة مع الهوية والجوال.</p></article>
+        <article><b>3</b><h3>مراجعة وتجهيز للنشر</h3><p>أراجع الروابط، الصور، سرعة التصفح، ظهور الأزرار، وعناصر SEO الأساسية قبل التسليم.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section portfolio" id="work">
+    <div class="container">
+      <div class="section-head">
+        <div><div class="eyebrow"><span></span> سابقة الأعمال</div><h2>نماذج تصميم لمجالات مختلفة <strong>تساعدك تختار اتجاه موقعك</strong></h2></div>
+        <p>هذه النماذج توضح طرقًا مختلفة لعرض الخدمات والمنتجات: موقع شركة، مركز طبي، مطعم، متجر إلكتروني، منصة تعليمية، نشاط زراعي ومنتجات طبيعية. الهدف أن ترى كيف يمكن تنظيم المحتوى بصريًا حسب طبيعة مشروعك.</p>
+      </div>
+      <div class="portfolio-stats">
+        <span><b>11</b> نموذج تصميم</span>
+        <span><b>8</b> مجالات أعمال</span>
+        <span><b>Click</b> عرض بحجم أكبر</span>
+      </div>
+      <div class="portfolio-grid portfolio-grid-enhanced">
+        <article class="work-card featured featured-large"><img src="images/callisto-slider-1-600x706.jpg" alt="نموذج تصميم موقع شركة خدمات واستشارات"><em>شركة خدمات</em><div><b>موقع شركة احترافي</b><span>مناسب للشركات التي تحتاج عرض خدمات، نبذة، ونقاط ثقة واضحة.</span></div></article>
+        <article class="work-card featured"><img src="images/venus-slider-1-600x706.jpg" alt="نموذج تصميم موقع مركز طبي وعيادات"><em>طبي</em><div><b>مركز طبي وعيادات</b><span>تنظيم الخدمات الطبية وساعات العمل وطرق الحجز بشكل مطمئن.</span></div></article>
+        <article class="work-card featured"><img src="images/ceres-home-1-600x706.jpg" alt="نموذج تصميم موقع صالون رجالي وحلاقة"><em>صالون</em><div><b>خدمات شخصية</b><span>ستايل بصري قوي يناسب الحجز وعرض الباقات والصور.</span></div></article>
+        <article class="work-card featured"><img src="images/rhea-slider-1.jpg" alt="نموذج تصميم موقع مطعم وحجز طاولات"><em>مطعم</em><div><b>مطعم وحجز</b><span>عرض الأجواء والقائمة والحجز بطريقة تجعل القرار أسهل.</span></div></article>
+        <article class="work-card featured"><img src="images/dione-slider-1-600x706.jpg" alt="نموذج تصميم موقع شركة زراعة ومنتجات زراعية"><em>زراعة</em><div><b>نشاط زراعي</b><span>مناسب للشركات التي تريد شرح المنتجات والخدمات بأسلوب هادئ.</span></div></article>
+        <article class="work-card featured"><img src="images/sylvia-home-1-600x706.jpg" alt="نموذج تصميم موقع كورسات وتعليم أونلاين"><em>تعليم</em><div><b>كورسات أونلاين</b><span>يعرض البرامج التعليمية والأرقام ومميزات الاشتراك بوضوح.</span></div></article>
+        <article class="work-card"><img src="images/umbriel-slider-1-600x706.jpg" alt="نموذج تصميم موقع منتجات طبيعية ومستحضرات عناية"><em>منتجات طبيعية</em><div><b>منتجات عناية</b><span>تصميم مناسب للمنتجات التي تحتاج إحساسًا بالنقاء والثقة.</span></div></article>
+        <article class="work-card"><img src="images/tethys-slider-1-600x706.jpg" alt="نموذج تصميم متجر إلكتروني للأزياء"><em>أزياء</em><div><b>متجر ملابس</b><span>واجهة تعتمد على الصور والفئات لتسهيل التصفح والشراء.</span></div></article>
+        <article class="work-card"><img src="images/vega-slider-1-1-600x706.jpg" alt="نموذج تصميم متجر إلكترونيات ومنتجات تقنية"><em>إلكترونيات</em><div><b>متجر إلكترونيات</b><span>تقسيم واضح للمنتجات والعروض مع إبراز مميزات الشراء.</span></div></article>
+        <article class="work-card"><img src="images/woodmart-home-1-600x706.jpg" alt="نموذج تصميم متجر أثاث ومنتجات منزلية"><em>أثاث</em><div><b>متجر أثاث</b><span>مناسب لعرض الفئات والمنتجات بطريقة سهلة للمقارنة.</span></div></article>
+        <article class="work-card"><img src="images/doris-slider-home-1-600x706.jpg" alt="نموذج تصميم موقع مخبز أو نشاط غذائي محلي"><em>مخبز</em><div><b>نشاط غذائي محلي</b><span>تصميم دافئ يبرز الصور والقصة والمنتجات الأساسية.</span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section results">
+    <div class="container results-grid">
+      <div><div class="eyebrow"><span></span> ما الذي يتحسن؟</div><h2>صفحة منظمة تجعل الزائر يرى <strong>المعلومة المهمة في وقتها.</strong></h2><p>لا أعدك بأرقام مبيعات غير واقعية، لكن الموقع المنظم يساعد على تقليل الأسئلة المتكررة، رفع الثقة، وتسهيل التواصل لأن الزائر يجد ما يحتاجه بسرعة.</p></div>
+      <div class="result-panel">
+        <div class="result-row"><span>وضوح الخدمة من أول شاشة</span><b>أساسي</b><i><em style="width:95%"></em></i></div>
+        <div class="result-row"><span>تجربة مريحة على الموبايل</span><b>مهم</b><i><em style="width:100%"></em></i></div>
+        <div class="result-row"><span>إظهار الدليل وسابقة الأعمال</span><b>ثقة</b><i><em style="width:90%"></em></i></div>
+        <div class="result-row"><span>تواصل مباشر بدون بحث طويل</span><b>CTA</b><i><em style="width:100%"></em></i></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section testimonials">
+    <div class="container">
+      <div class="center-head"><div class="eyebrow"><span></span> لماذا هذا مهم؟</div><h2>الموقع الجيد يجيب قبل أن يسأل العميل <strong>ويزيل التردد خطوة بخطوة.</strong></h2></div>
+      <div class="testimonial-grid">
+        <article><div class="quote">“</div><p>عندما يدخل الزائر صفحة واضحة، يصبح فهم الخدمة أسرع، وتقل الحاجة إلى شرح طويل في أول مكالمة.</p><b>وضوح الرسالة</b></article>
+        <article><div class="quote">“</div><p>وجود أمثلة وصور ونقاط خدمة مرتبة يعطي العميل سببًا منطقيًا للاستمرار بدل مغادرة الصفحة.</p><b>بناء الثقة</b></article>
+        <article><div class="quote">“</div><p>أفضل صفحة ليست الأطول، بل الصفحة التي تقود الزائر من السؤال إلى القرار بدون تشتيت.</p><b>تجربة المستخدم</b></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section faq" id="faq">
+    <div class="container faq-grid">
+      <div><div class="eyebrow"><span></span> الأسئلة الشائعة</div><h2>إجابات مختصرة تساعدك <strong>قبل طلب التصميم.</strong></h2><p>إذا كنت تحتاج موقع شركة، صفحة هبوط، متجر إلكتروني، أو إعادة تصميم موقع قائم، يمكن تحديد الأنسب بعد معرفة هدف المشروع.</p></div>
+      <div class="faq-list">
+        <details open><summary>هل تصمم مواقع متوافقة مع الموبايل؟</summary><p>نعم. يتم تصميم الصفحة بشكل Responsive حتى تظهر النصوص والصور والأزرار بطريقة مناسبة على الهاتف والتابلت والكمبيوتر.</p></details>
+        <details><summary>هل الموقع يكون مناسبًا لمحركات البحث SEO؟</summary><p>أضيف أساسيات مهمة مثل عنوان الصفحة، وصف Meta، ترتيب العناوين، نصوص واضحة، أوصاف للصور، وهيكل محتوى يساعد محركات البحث على فهم الخدمة.</p></details>
+        <details><summary>ما المقصود بأنه مناسب لمحركات الذكاء الاصطناعي؟</summary><p>المقصود أن المحتوى يكون مباشرًا ومنظمًا: من يقدم الخدمة، ما نوع الخدمة، لمن تناسب، أين تقدم، وكيف يتواصل العميل. هذا يساعد أنظمة البحث والذكاء الاصطناعي على فهم الصفحة بشكل أفضل.</p></details>
+        <details><summary>هل تكتب محتوى الصفحة أم أرسله أنا؟</summary><p>يمكنك إرسال معلومات بسيطة عن نشاطك، وأنا أساعد في تحويلها إلى عناوين ونصوص مرتبة وواضحة تناسب الزائر ومحركات البحث.</p></details>
+        <details><summary>كيف أبدأ مع أيمن نعيم؟</summary><p>أرسل نوع نشاطك، أمثلة مواقع تحبها، والخدمة التي تريد التركيز عليها عبر واتساب على الرقم 01010484782، وسأقترح عليك هيكل الصفحة المناسب.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta" id="contact">
+    <div class="container cta-inner">
+      <div><div class="eyebrow light"><span></span> هل تريد موقعًا يشرح خدمتك بوضوح؟</div><h2>تواصل مع <strong>أيمن نعيم</strong> لمراجعة فكرة موقعك أو صفحة الهبوط.</h2><p>أرسل نبذة عن نشاطك، وسأساعدك في تحديد الأقسام الأساسية التي يحتاجها موقعك قبل التصميم.</p></div>
+      <div class="cta-actions"><a class="btn btn-gold" href="https://wa.me/201010484782" target="_blank" rel="noopener">راسلني على واتساب</a><a class="btn btn-outline-white" href="tel:+201010484782">01010484782</a></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div><a class="brand footer-brand" href="#home">أيمن نعيم<span>.</span></a><p>مصمم مواقع وصفحات هبوط في القاهرة، أساعد الشركات والأنشطة التجارية على بناء موقع واضح، متجاوب، ومناسب لمحركات البحث.</p></div>
+    <div><h4>الخدمات</h4><a href="#services">تصميم مواقع للشركات</a><a href="#services">تصميم Landing Pages</a><a href="#services">تحسين تجربة المستخدم</a><a href="#services">تهيئة SEO أساسية</a></div>
+    <div><h4>روابط سريعة</h4><a href="#home">الرئيسية</a><a href="#process">طريقة العمل</a><a href="#faq">الأسئلة الشائعة</a><a href="#contact">تواصل معنا</a></div>
+    <div><h4>معلومات التواصل</h4><a href="tel:+201010484782">01010484782</a><span>أيمن نعيم، مدينة نصر، القاهرة، مصر</span><a href="https://wa.me/201010484782" target="_blank" rel="noopener">واتساب مباشر</a></div>
+  </div>
+  <div class="container copyright">© 2026 أيمن نعيم. جميع الحقوق محفوظة.</div>
+</footer>
+
+<a class="floating-whatsapp" href="https://wa.me/201010484782" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب">WA</a>
+<div class="lightbox" id="lightbox"><button aria-label="إغلاق">×</button><img src="" alt=""></div>
+<script src="script.js"></script>
 </body>
-
-
 </html>
