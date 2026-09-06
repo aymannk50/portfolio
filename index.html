@@ -34,16 +34,20 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip-link" href="#services">تخطي إلى المحتوى</a>
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
 
 <header class="navbar">
   <div class="container nav-inner">
     <a class="brand" href="#home">أيمن نعيم<span>.</span></a>
-    <nav class="nav-links" aria-label="التنقل الرئيسي">
+    <button class="menu-toggle" type="button" aria-label="فتح القائمة" aria-controls="primary-navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="primary-navigation" aria-label="التنقل الرئيسي">
       <a href="#home">الرئيسية</a>
       <a href="#services">الخدمات</a>
       <a href="#benefits">القيمة</a>
       <a href="#process">طريقة العمل</a>
       <a href="#work">سابقة الأعمال</a>
+      <a href="#pricing">الأسعار</a>
       <a href="#faq">الأسئلة الشائعة</a>
       <a href="#contact">تواصل</a>
     </nav>
@@ -52,7 +56,7 @@
 </header>
 
 <main id="home">
-  <section class="hero hero-v2">
+  <section class="hero hero-v2" data-nav="home">
     <div class="hero-v2-glow hero-v2-glow-one"></div>
     <div class="hero-v2-glow hero-v2-glow-two"></div>
     <div class="space-field" aria-hidden="true">
@@ -75,7 +79,7 @@
       <div class="hero-v2-visual">
         <div class="hero-corners" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
         <div class="hero-photo-ring"></div>
-        <div class="hero-photo-wrap"><img src="images/1758813904382.jpg" alt="أيمن نعيم مصمم مواقع وصفحات هبوط في القاهرة" loading="eager"></div>
+        <div class="hero-photo-wrap"><img src="images/profile-suit-black.jpg" alt="أيمن نعيم مصمم مواقع وصفحات هبوط في القاهرة" loading="eager"></div>
         <div class="hero-float-card hero-contact-card">
           <span>تواصل مباشر</span><strong>01010484782</strong><small>واتساب واتصال</small>
         </div>
@@ -83,6 +87,25 @@
           <span>تركيز التصميم</span><strong>وضوح وثقة</strong><small>مناسب للزائر ومحركات البحث</small>
         </div>
         <div class="hero-orbit-dot dot-a"></div><div class="hero-orbit-dot dot-b"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="consultation-strip" id="consultation">
+    <div class="container">
+      <div class="free-consultation">
+        <div class="consultation-top">
+          <span>استشارة مجانية</span>
+          <b>30 دقيقة</b>
+        </div>
+        <strong>احجز مكالمة سريعة لمراجعة فكرة موقعك</strong>
+        <p>نحدد فيها هدف الصفحة، الأقسام المناسبة، وأفضل بداية حسب ميزانيتك.</p>
+        <ul class="consultation-points">
+          <li>مراجعة فكرة المشروع</li>
+          <li>اقتراح هيكل الصفحة</li>
+          <li>تحديد الباقة الأنسب</li>
+        </ul>
+        <a class="btn btn-gold consultation-cta" href="https://calendly.com/1stfit/andscope" target="_blank" rel="noopener">احجز الاستشارة الآن</a>
       </div>
     </div>
   </section>
@@ -173,7 +196,7 @@
       <div class="portfolio-stats">
         <span><b>11</b> نموذج تصميم</span>
         <span><b>8</b> مجالات أعمال</span>
-        <span><b>Click</b> عرض بحجم أكبر</span>
+        <span><b>اضغط</b> عرض بحجم أكبر</span>
       </div>
       <div class="portfolio-grid portfolio-grid-enhanced">
         <article class="work-card featured featured-large"><img src="images/callisto-slider-1-600x706.jpg" alt="نموذج تصميم موقع شركة خدمات واستشارات"><em>شركة خدمات</em><div><b>موقع شركة احترافي</b><span>مناسب للشركات التي تحتاج عرض خدمات، نبذة، ونقاط ثقة واضحة.</span></div></article>
@@ -227,6 +250,64 @@
     </div>
   </section>
 
+  <section class="section pricing-section" id="pricing">
+    <div class="container pricing-layout">
+      <div class="pricing-copy">
+        <div class="eyebrow"><span></span> باقات تصميم المواقع</div>
+        <h2>اختار البداية المناسبة <strong>لمشروعك</strong></h2>
+        <p>الأسعار التالية تقديرية وتبدأ من الأرقام الموضحة. بعد معرفة تفاصيل مشروعك أرسل لك عرضًا دقيقًا يشمل الصفحات والمميزات ومدة التنفيذ.</p>
+        <div class="price-list">
+          <div><span>Landing Page</span><strong>من 8,000 جنيه</strong></div>
+          <div><span>موقع شركة أو خدمات</span><strong>من 14,000 جنيه</strong></div>
+          <div><span>متجر إلكتروني</span><strong>من 24,000 جنيه</strong></div>
+          <div><span>منصة أو مشروع مخصص</span><strong>من 35,000 جنيه</strong></div>
+        </div>
+        <p class="pricing-note">جميع الأسعار غير شاملة الاستضافة أو الدومين أو أي اشتراكات خارجية.</p>
+      </div>
+      <div class="pricing-contact">
+      <form class="lead-form" data-lead-form data-whatsapp="201010484782" novalidate>
+        <h3>اطلب عرض سعر</h3>
+        <p class="form-hint">اكتب بياناتك وسأرد عليك عبر واتساب لتحديد الأنسب لمشروعك.</p>
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="lead-name">الاسم بالكامل</label>
+            <input id="lead-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="form-field">
+            <label for="lead-phone">رقم الموبايل</label>
+            <input id="lead-phone" name="phone" type="tel" autocomplete="tel" inputmode="numeric" dir="ltr" placeholder="01012345678" pattern="^01[0125][0-9]{8}$" maxlength="11" required>
+          </div>
+          <div class="form-field">
+            <label for="lead-service">الخدمة المطلوبة</label>
+            <select id="lead-service" name="service">
+              <option value="">لم أحدد بعد</option>
+              <option value="Landing Page - من 8,000 جنيه">Landing Page - من 8,000 جنيه</option>
+              <option value="موقع شركة - من 14,000 جنيه">موقع شركة - من 14,000 جنيه</option>
+              <option value="متجر إلكتروني - من 24,000 جنيه">متجر إلكتروني - من 24,000 جنيه</option>
+              <option value="مشروع مخصص - من 35,000 جنيه">مشروع مخصص - من 35,000 جنيه</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="lead-budget">الميزانية التقريبية</label>
+            <select id="lead-budget" name="budget">
+              <option value="8,000 - 14,000 جنيه">8,000 - 14,000 جنيه</option>
+              <option value="14,000 - 24,000 جنيه">14,000 - 24,000 جنيه</option>
+              <option value="24,000 - 35,000 جنيه">24,000 - 35,000 جنيه</option>
+              <option value="أكثر من 35,000 جنيه">أكثر من 35,000 جنيه</option>
+            </select>
+          </div>
+          <div class="form-field form-field-full">
+            <label for="lead-message">تفاصيل المشروع <span>(اختياري)</span></label>
+            <textarea id="lead-message" name="message" placeholder="نوع النشاط، عدد الصفحات، أو أي تفاصيل مهمة..."></textarea>
+          </div>
+        </div>
+        <p class="form-error" data-lead-error hidden>من فضلك اكتب الاسم ورقم موبايل مصري صحيح.</p>
+        <button class="btn btn-gold form-submit" type="submit">أرسل طلبك عبر واتساب</button>
+      </form>
+      </div>
+    </div>
+  </section>
+
   <section class="final-cta" id="contact">
     <div class="container cta-inner">
       <div><div class="eyebrow light"><span></span> هل تريد موقعًا يشرح خدمتك بوضوح؟</div><h2>تواصل مع <strong>أيمن نعيم</strong> لمراجعة فكرة موقعك أو صفحة الهبوط.</h2><p>أرسل نبذة عن نشاطك، وسأساعدك في تحديد الأقسام الأساسية التي يحتاجها موقعك قبل التصميم.</p></div>
@@ -246,7 +327,7 @@
 </footer>
 
 <a class="floating-whatsapp" href="https://wa.me/201010484782" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب">WA</a>
-<div class="lightbox" id="lightbox"><button aria-label="إغلاق">×</button><img src="" alt=""></div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="معاينة العمل"><button aria-label="إغلاق">×</button><img src="" alt=""></div>
 <script src="script.js"></script>
 </body>
 </html>
