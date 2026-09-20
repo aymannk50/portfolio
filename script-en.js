@@ -10,7 +10,7 @@ const progressBar = document.querySelector('.scroll-progress span');
 function setMenu(open) {
   if (!menuToggle || !navLinks) return;
   menuToggle.setAttribute('aria-expanded', String(open));
-  menuToggle.setAttribute('aria-label', open ? 'إغلاق القائمة' : 'فتح القائمة');
+  menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   navLinks.classList.toggle('is-open', open);
   body.classList.toggle('menu-open', open);
 }
@@ -122,8 +122,8 @@ document.querySelectorAll('[data-lead-form]').forEach(form => {
     if (error) {
       error.hidden = !hasError;
       error.textContent = !name
-        ? 'من فضلك اكتب الاسم ورقم الموبايل.'
-        : 'من فضلك اكتب رقم موبايل مصري صحيح مثل 01012345678.';
+        ? 'Please write your name and mobile number.'
+        : 'Please write a valid Egyptian mobile number such as 01012345678.';
     }
 
     if (hasError) {
@@ -132,12 +132,12 @@ document.querySelectorAll('[data-lead-form]').forEach(form => {
     }
 
     const message = [
-      'مرحبًا أيمن، أريد طلب عرض سعر لتصميم موقع.',
-      `الاسم: ${name}`,
-      `رقم الموبايل: ${formattedPhone}`,
-      `الخدمة: ${formData.get('service') || 'لم أحدد بعد'}`,
-      `الميزانية: ${formData.get('budget') || 'غير محددة'}`,
-      `تفاصيل المشروع: ${String(formData.get('message') || '').trim() || 'لا توجد تفاصيل إضافية'}`
+      'Hello Ayman, I would like to request a website design quote.',
+      `Name: ${name}`,
+      `Mobile number: ${formattedPhone}`,
+      `Service: ${formData.get('service') || 'Not decided yet'}`,
+      `Budget: ${formData.get('budget') || 'Not specified'}`,
+      `Project details: ${String(formData.get('message') || '').trim() || 'No additional details'}`
     ].join('\n');
 
     form.classList.add('is-sent');

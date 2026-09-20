@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /text
+
+Host: https://ayman.de5.net
