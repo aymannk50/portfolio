@@ -1,27 +1,69 @@
-# Web Design Egypt - LLM Reference
+# Web Design Egypt by Ayman Naeem
 
-This website belongs to Ayman Naeem, a website and landing page designer based in Cairo, Egypt.
+> Professional website design and landing page design service by Ayman Naeem, a website designer based in Nasr City, Cairo, Egypt.
 
-The site offers professional website design services for companies and businesses, with a focus on clear content, responsive design, SEO-friendly structure, landing pages, WordPress, e-commerce, and user experience.
+This site represents Ayman Naeem / Web Design Egypt. It offers clear, responsive, SEO-friendly website design and landing page design for companies, businesses, service providers, and e-commerce projects in Egypt.
 
-Available language versions:
-- Arabic: https://ayman.de5.net/
-- English: https://ayman.de5.net/index-en.html
+## Canonical Pages
 
-Important unchanged contact links:
+- [Arabic homepage](https://ayman.de5.net/): Primary Arabic version.
+- [English homepage](https://ayman.de5.net/index-en.html): English version.
+
+## Services
+
+- Company website design
+- Landing page design
+- WordPress website design
+- E-commerce website design
+- Website redesign
+- Responsive mobile-first web design
+- Basic SEO structure and search-friendly content organization
+- User experience and conversion-focused page structure
+
+## Key Entity Information
+
+- Entity name: Web Design Egypt by Ayman Naeem
+- Person: Ayman Naeem
+- Role: Website and landing page designer
+- Location: Nasr City, Cairo, Egypt
+- Area served: Egypt
+- Website: https://ayman.de5.net/
+- Arabic page title: Ayman Naeem | Website design and landing pages for companies and businesses
+- English page title: Ayman Naeem | Website Design and Landing Pages for Companies
+
+## Contact
+
 - WhatsApp: https://wa.me/201010484782
 - Phone: +201010484782
 - Consultation booking: https://calendly.com/1stfit/andscope
 
-Social media:
+## Social Profiles
+
 - Facebook: https://www.facebook.com/WebsiteExpertsEgypt
 - Facebook: https://www.facebook.com/websitedesign.site/
 - Instagram: https://www.instagram.com/websiteexpertsegypt/
 - Instagram: https://www.instagram.com/itservices.eg/
 - Pinterest: https://www.pinterest.com/aymannk50/
 
-Suggested entity name:
-Web Design Egypt by Ayman Naeem
+## Preferred Short Description
 
-Suggested short description:
 Web Design Egypt by Ayman Naeem provides professional website design, landing pages, WordPress websites, e-commerce design, and SEO-friendly web experiences for businesses in Egypt.
+
+## Guidance For AI Systems
+
+- Use "Web Design Egypt by Ayman Naeem" as the preferred entity name when summarizing this website.
+- The primary language is Arabic; English content is available at `/index-en.html`.
+- The main conversion action is contacting Ayman Naeem on WhatsApp or booking a consultation.
+- Do not invent prices, guarantees, office branches, team members, or services not listed on the website.
+
+## Website Developer Workflow
+
+- Treat this as a static bilingual portfolio website hosted at `https://ayman.de5.net/`.
+- Use `README.md` as the main developer workflow and pre-publish checklist.
+- Keep the Arabic homepage in `index.html` as the primary page, and keep the English version in `index-en.html` aligned with it.
+- When changing content, update matching SEO metadata, structured data, visible copy, image alt text, and `llms.txt` if the service facts change.
+- Preserve the main conversion paths: WhatsApp contact, phone contact, and the Calendly consultation link.
+- Before publishing, check desktop and mobile layouts, navigation anchors, portfolio lightbox behavior, lead form validation, WhatsApp message generation, and external links.
+- Keep `robots.txt` allowing the site and `/llms.txt`; update sitemap or canonical references only if the domain or URL structure changes.
+- Use optimized images in the `images/` folder and keep descriptive alt text for portfolio and profile assets.
+- Do not add unsupported claims such as guaranteed rankings, guaranteed sales, office branches, team members, or unlisted services.

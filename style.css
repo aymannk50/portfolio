@@ -178,3 +178,33 @@ body.menu-open{overflow:hidden}
   .footer-map,.footer-map iframe{min-height:250px}
   .english-page .lead-form.is-sent:after{content:"The message is ready and WhatsApp has been opened."}
 }
+
+/* Motion polish */
+.hero-badge{animation:fadeLift .65s ease .08s both}
+.hero-v2 h1{animation:fadeLift .75s ease .18s both}
+.hero-v2-lead{animation:fadeLift .75s ease .28s both}
+.hero-v2-actions{animation:fadeLift .75s ease .38s both}
+.hero-v2-proof{animation:fadeLift .75s ease .48s both}
+.free-consultation,.result-panel,.lead-form,.pricing-note,.footer-social-panel,.footer-map{animation:fadeLift .7s ease both}
+.stats-grid div,.feature-grid article,.benefit-grid article,.steps article,.testimonial-grid article,.price-list div,.faq-list details{animation:fadeLift .68s ease both}
+.stats-grid div:nth-child(2),.feature-grid article:nth-child(2),.benefit-grid article:nth-child(2),.steps article:nth-child(2),.testimonial-grid article:nth-child(2),.price-list div:nth-child(2),.faq-list details:nth-child(2){animation-delay:.06s}
+.stats-grid div:nth-child(3),.feature-grid article:nth-child(3),.benefit-grid article:nth-child(3),.steps article:nth-child(3),.testimonial-grid article:nth-child(3),.price-list div:nth-child(3),.faq-list details:nth-child(3){animation-delay:.12s}
+.stats-grid div:nth-child(4),.feature-grid article:nth-child(4),.benefit-grid article:nth-child(4),.price-list div:nth-child(4),.faq-list details:nth-child(4){animation-delay:.18s}
+.faq-list details:nth-child(5){animation-delay:.24s}
+.feature-grid article,.benefit-grid article,.steps article,.testimonial-grid article,.faq-list details,.lead-form,.free-consultation{will-change:transform}
+.btn-gold,.nav-cta,.consultation-cta{position:relative;isolation:isolate;overflow:hidden}
+.btn-gold:after,.nav-cta:after,.consultation-cta:after{content:"";position:absolute;z-index:0;inset:-40% auto -40% -55%;width:44%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);transition:.45s;pointer-events:none}
+.btn-gold:hover:after,.nav-cta:hover:after,.consultation-cta:hover:after{left:112%}
+.hero-badge span,.stats-grid strong{animation:softPulse 2.8s ease-in-out infinite}
+.floating-whatsapp{animation:whatsappPulse 2.7s ease-in-out infinite}
+.result-row em{animation:barGlow 2.8s ease-in-out infinite}
+.social-link:hover svg{animation:iconPop .32s ease both}
+@keyframes fadeLift{from{opacity:0;transform:translate3d(0,18px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+@keyframes softPulse{0%,100%{filter:none;transform:scale(1)}50%{filter:drop-shadow(0 0 10px rgba(243,181,27,.32));transform:scale(1.035)}}
+@keyframes whatsappPulse{0%,100%{box-shadow:0 12px 30px rgba(37,211,102,.28);transform:translateY(0)}50%{box-shadow:0 16px 42px rgba(37,211,102,.42);transform:translateY(-3px)}}
+@keyframes barGlow{0%,100%{filter:saturate(1)}50%{filter:saturate(1.35) brightness(1.08)}}
+@keyframes iconPop{0%{transform:scale(1)}55%{transform:scale(1.14)}100%{transform:scale(1)}}
+@media(prefers-reduced-motion:reduce){
+  *,*:before,*:after{animation-duration:.001ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.001ms!important}
+  .floating-whatsapp,.btn:hover,.social-link:hover,.feature-grid article:hover,.portfolio-grid-enhanced .work-card:hover{transform:none!important}
+}

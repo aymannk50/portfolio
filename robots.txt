@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /text
-
+Allow: /llms.txt
 Host: https://ayman.de5.net
+Sitemap: https://ayman.de5.net/sitemap.xml
